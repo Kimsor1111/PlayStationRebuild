@@ -1,18 +1,19 @@
 const navSideContainer = document.querySelector(".nav-side");
-const navbarIcon = document.querySelector("nav .nav-icon .fa-bars");
-const navbarcloseIcon = document.querySelector("nav .nav-icon .fa-x");
+const navbarMenuIcon = document.querySelector("nav .nav-icon .fa-bars");
+const navbarCloseIcon = document.querySelector("nav .nav-icon .fa-x");
+const navSideSubmenuContainer = document.querySelector(".nav-side-submenu");
 
 // for nav-side to show in the mobile or landscape device
-navbarIcon.addEventListener("click", () => {
+navbarMenuIcon.addEventListener("click", () => {
   navSideContainer.style.transform = "translateY(0)";
-  navbarIcon.style.display = "none";
-  navbarcloseIcon.style.display = "block";
+  navbarMenuIcon.style.display = "none";
+  navbarCloseIcon.style.display = "block";
 });
 
-navbarcloseIcon.addEventListener("click", () => {
+navbarCloseIcon.addEventListener("click", () => {
   navSideContainer.style.transform = "translateY(-100%)";
-  navbarIcon.style.display = "block";
-  navbarcloseIcon.style.display = "none";
+  navbarMenuIcon.style.display = "block";
+  navbarCloseIcon.style.display = "none";
 });
 
 // for menu list toggle the submenu
@@ -60,9 +61,7 @@ navList.forEach((listitem, listindex) => {
 //for menu list click to open and close in mobile and landscape device
 
 const navSideList = document.querySelectorAll(".nav-side ul li");
-const navSideSubmenuContainer = document.querySelector(".nav-side-submenu");
 const navSideSubmenu = document.querySelectorAll(".nav-side-submenu .submenu");
-console.log(navSideSubmenu);
 const navSideSubmenuCloseBtn = document.querySelectorAll(
   ".nav-side-submenu .submenu .fa-arrow-left"
 );
