@@ -78,9 +78,9 @@ navSideList.forEach((navSideListItem, index) => {
 //close submenu side
 navSideSubmenuCloseBtn.forEach((Btn, index) => {
   Btn.addEventListener("click", () => {
-    navSideSubmenuContainer.style.cssText = `transform: translateX(100%)`;
+    navSideSubmenuContainer.style.cssText = `transform: translateX(-100%)`;
     navSideSubmenu[index].style.cssText = `
-      transform: translateX(100%);
+      transform: translateX(-100%);
     `;
   });
 });
