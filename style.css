@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
-@import url("https://fonts.cdnfonts.com/css/clarendon-mt-std");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 ::-webkit-scrollbar {
   display: none;
 }
@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins";
+  font-family: "Noto Sans";
 }
 header {
   width: 100%;
@@ -84,6 +84,7 @@ nav .nav-content .nav-list li {
   align-items: center;
   padding-inline: 3px;
   font-size: 13px;
+  font-family: "Poppins";
   font-weight: 500;
   cursor: pointer;
 }
@@ -94,18 +95,20 @@ nav .nav-content .nav-list li .rotate-sign {
   transition: linear 0.2s;
   color: gray;
   font-weight: 500;
+  font-family: "Poppins";
 }
 nav .nav-content .nav-list li .sub-nav {
   position: absolute;
   top: 60px;
   width: 100%;
-  height: fit-content;
+  height: 180px;
   left: 0;
   opacity: 0;
   visibility: hidden;
   transition: ease-in 0.2s;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 nav .nav-content .nav-list li .sub-nav ul {
   width: fit-content;
@@ -124,6 +127,7 @@ nav .nav-content .nav-list li .sub-nav ul li {
   font-size: 15px;
   padding: 5px 10px;
   border-radius: 5px;
+  font-family: "Poppins";
 }
 nav .nav-content .nav-list li .sub-nav ul li:not(:hover) {
   color: black;
@@ -155,10 +159,82 @@ nav .nav-btn button {
   font-size: 15px;
   border-radius: 15px;
   cursor: pointer;
+  font-family: "Poppins";
 }
 nav .nav-btn button:hover {
   background-color: rgb(0, 70, 175);
 }
 nav .nav-btn i {
   cursor: pointer;
+}
+.big-banner {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.big-banner .big-banner-img {
+  width: 100%;
+  height: 500px;
+}
+.big-banner .big-banner-img .img-lg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.big-banner .big-banner-img .img-md {
+  display: none;
+}
+.big-banner .big-banner-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.big-banner .big-banner-content .img {
+  width: 290px;
+  height: fit-content;
+  position: absolute;
+  top: 70px;
+  left: 20px;
+}
+.big-banner .big-banner-content .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.big-banner .big-banner-content .des {
+  width: 500px;
+  margin-top: 10px;
+  height: fit-content;
+  position: absolute;
+  top: 270px;
+  left: 20px;
+}
+.big-banner .big-banner-content .des h1 {
+  font-weight: 500;
+  color: white;
+}
+.big-banner .big-banner-content .des p {
+  font-weight: 500;
+  color: white;
+  margin-block: 10px;
+}
+.big-banner .big-banner-content .des button {
+  width: fit-content;
+  height: 40px;
+  padding-inline: 30px;
+  border: none;
+  border-radius: 20px;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+.big-banner .big-banner-content .des button:hover {
+  background-color: rgb(205, 202, 202);
 }
