@@ -84,3 +84,23 @@ navSideSubmenuCloseBtn.forEach((Btn, index) => {
     `;
   });
 });
+
+const BigBannerSlider = document.querySelectorAll(".big-banner");
+const BigBannerText = document.querySelectorAll(
+  ".big-banner .big-banner-content"
+);
+console.log(BigBannerText);
+let currentIndex = 0;
+// Hide all banners first
+BigBannerSlider.forEach((item) => {
+  item.style.cssText = `display: none;`;
+});
+// Show the first banner
+BigBannerSlider[currentIndex].style.cssText = `display: block;`;
+setInterval(() => {
+  BigBannerSlider.forEach((item) => {
+    item.style.cssText = `display: none;`;
+  });
+  BigBannerSlider[currentIndex].style.cssText = `display: block;`;
+  currentIndex = (currentIndex + 1) % BigBannerSlider.length;
+}, 1000);

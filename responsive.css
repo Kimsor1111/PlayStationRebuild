@@ -149,7 +149,8 @@
     margin-top: -1px;
   }
   .big-banner {
-    height: 550px;
+    height: 600px;
+    margin-bottom: 250px;
   }
   .big-banner .big-banner-img {
     width: 100%;
@@ -165,13 +166,12 @@
     display: none;
   }
   .big-banner .big-banner-content {
-    height: fit-content;
-    top: 400px;
-    padding: 25px 0;
+    height: 350px;
+    top: 450px;
+    padding: 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(10, 9, 56);
   }
   .big-banner .big-banner-content .img,
   .big-banner .big-banner-content .img img {
@@ -195,14 +195,31 @@
   .big-banner .big-banner-content .des button {
     width: 145px;
     height: 35px;
-    font-size: 14px;
-  }
-  .big-banner .big-banner-content .des button:hover {
-    background-color: rgb(230, 230, 230);
+    font-size: 13px;
   }
   .big-banner .big-banner-content .des button:hover::after {
     width: 145px;
     height: 35px;
+  }
+  /* Reuse Md Class*/
+  .bg-md-purple {
+    background-color: rgb(10, 8, 47) !important;
+  }
+  .bg-md-light {
+    background-color: rgb(234, 239, 249) !important;
+  }
+  .bg-md-dark {
+    background-color: rgb(17, 19, 21) !important;
+  }
+  .bg-md-blue-slate {
+    background-color: rgb(2, 8, 26) !important;
+  }
+  .bg-md-pink {
+    background-color: rgb(160, 64, 121) !important;
+  }
+  .bg-md-light .des h1,
+  .bg-md-light .des p {
+    color: black !important;
   }
 }
 

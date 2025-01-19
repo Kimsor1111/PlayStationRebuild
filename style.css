@@ -173,10 +173,11 @@ nav .nav-btn i {
   position: relative;
   margin-top: 40px;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 .big-banner .big-banner-img {
   width: 100%;
-  height: 500px;
+  height: 550px;
 }
 .big-banner .big-banner-img .img-lg {
   width: 100%;
@@ -189,12 +190,15 @@ nav .nav-btn i {
 .big-banner .big-banner-content {
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   position: absolute;
   top: 0;
-  padding: 50px 0 0 30px;
+  padding: 0 0 0 30px;
   background-color: rgba(0, 0, 0, 0.4);
 }
-.big-banner .big-banner-content .img ,
+.big-banner .big-banner-content .img,
 .big-banner .big-banner-content .img img {
   width: 250px;
   height: fit-content;
@@ -202,7 +206,7 @@ nav .nav-btn i {
 }
 
 .big-banner .big-banner-content .des {
-  width: 600px;
+  width: 550px;
   height: fit-content;
   margin-top: 10px;
 }
@@ -212,12 +216,12 @@ nav .nav-btn i {
 }
 .big-banner .big-banner-content .des * {
   color: white;
+  margin-bottom: 10px;
 }
 
 .big-banner .big-banner-content .des button {
   width: 165px;
   height: 40px;
-  background-color: white;
   margin-top: 20px;
   border: none;
   border-radius: 30px;
@@ -227,18 +231,48 @@ nav .nav-btn i {
   cursor: pointer;
   color: black;
   position: relative;
-}
-.big-banner .big-banner-content .des button:hover {
-  background-color: rgb(230, 230, 230);
+  text-transform: capitalize;
 }
 .big-banner .big-banner-content .des button:hover::after {
   content: "";
   width: 165px;
   height: 40px;
-  padding: 2px;
+  padding: 2.2px;
   border-radius: 35px;
-  border: 2.5px solid rgb(230, 230, 230);
-  top: -4px;
-  left: -4.2px;
+  top: -4.4px;
+  left: -4.3px;
   position: absolute;
+}
+
+/* Reuse Class */
+
+button.btn-light {
+  background-color: white;
+  color: black;
+}
+button.btn-light:hover {
+  background-color: rgb(230, 230, 230);
+}
+button.btn-light:hover::after {
+  border: 2.5px solid rgb(230, 230, 230);
+}
+button.btn-warning {
+  background-color: rgba(214, 61, 0);
+  color: white !important;
+}
+button.btn-warning:hover {
+  background-color: rgb(159, 45, 0);
+}
+button.btn-warning:hover::after {
+  border: 2.5px solid rgba(159, 45, 0);
+}
+button.btn-primary {
+  background-color: rgba(0, 112, 204);
+  color: white !important;
+}
+button.btn-primary:hover {
+  background-color: rgb(0, 67, 121);
+}
+button.btn-primary:hover::after {
+  border: 2.5px solid rgba(0, 67, 121);
 }
