@@ -7,7 +7,6 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
   overflow-x: hidden;
 }
 * {
@@ -297,6 +296,7 @@ button.btn-primary:hover::after {
   width: 13%;
   height: 100%;
   padding: 3px;
+  padding-left: 3.5px;
   cursor: pointer;
   border-radius: 20px;
   transition: 0.2s linear;
@@ -311,7 +311,7 @@ button.btn-primary:hover::after {
   position: absolute;
   top: 50%;
   left: 50.3%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 .small-banner .small-banner-container .small-banner-item img {
   width: 100%;

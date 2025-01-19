@@ -14,9 +14,13 @@
   .small-banner {
     width: 990px;
     height: 80px;
+    align-self: center;
   }
   .small-banner .small-banner-container {
     width: 99%;
+  }
+  .small-banner .small-banner-container .small-banner-item:hover::after {
+    border: 2.5px solid rgb(0, 102, 255);
   }
 }
 /*Medium devices (tablets, 768px and up)*/
@@ -24,11 +28,12 @@
   .small-banner {
     width: 750px;
     height: 60px;
+    align-self: center;
   }
   .small-banner .small-banner-container .small-banner-item {
     border-radius: 15px;
-    padding: 2px;
-    padding-inline: 2.5px;
+    padding: 2.5px;
+    padding-inline: 2.8px;
   }
   .small-banner .small-banner-container .small-banner-item img {
     border-radius: 10px;
