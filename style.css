@@ -5,6 +5,9 @@
 }
 body {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   overflow-x: hidden;
 }
 * {
@@ -275,4 +278,7 @@ button.btn-primary:hover {
 }
 button.btn-primary:hover::after {
   border: 2.5px solid rgba(0, 67, 121);
+}
+.small-banner{
+  
 }
