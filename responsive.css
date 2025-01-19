@@ -149,12 +149,12 @@
     margin-top: -1px;
   }
   .big-banner {
-    height: 600px;
+    height: 500px;
     margin-bottom: 250px;
   }
   .big-banner .big-banner-img {
     width: 100%;
-    height: 550px;
+    height: 500px;
   }
   .big-banner .big-banner-img .img-md {
     width: 100%;
@@ -167,7 +167,7 @@
   }
   .big-banner .big-banner-content {
     height: 350px;
-    top: 450px;
+    top: 400px;
     padding: 0 0;
     display: flex;
     flex-direction: column;
