@@ -194,9 +194,11 @@ nav .nav-btn i {
   padding: 50px 0 0 30px;
   background-color: rgba(0, 0, 0, 0.4);
 }
+.big-banner .big-banner-content .img ,
 .big-banner .big-banner-content .img img {
   width: 250px;
   height: fit-content;
+  object-fit: contain;
 }
 
 .big-banner .big-banner-content .des {

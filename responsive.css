@@ -173,8 +173,8 @@
     align-items: center;
     background-color: rgb(10, 9, 56);
   }
+  .big-banner .big-banner-content .img,
   .big-banner .big-banner-content .img img {
-    width: 200px;
     height: 140px;
   }
   .big-banner .big-banner-content .des {
