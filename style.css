@@ -306,12 +306,15 @@ button.btn-primary:hover::after {
   content: "";
   width: 100%;
   height: 100%;
-  border: 4px solid rgb(0, 102, 255);
+  border: 3px solid rgb(0, 102, 255);
   border-radius: 15px;
   position: absolute;
   top: 50%;
   left: 50.3%;
   transform: translate(-50%, -50%);
+}
+.change-after::after{
+  border: 3px solid rgb(0, 102, 255);
 }
 .small-banner .small-banner-container .small-banner-item img {
   width: 100%;
@@ -325,5 +328,5 @@ button.btn-primary:hover::after {
   transform: translateY(-20px);
 }
 .small-banner .small-banner-container .small-banner-item:hover img {
-  opacity: 1;
+  opacity: 1 !important;
 }

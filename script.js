@@ -85,22 +85,53 @@ navSideSubmenuCloseBtn.forEach((Btn, index) => {
   });
 });
 
+// Play the big and small banner animation
 const BigBannerSlider = document.querySelectorAll(".big-banner");
-const BigBannerText = document.querySelectorAll(
-  ".big-banner .big-banner-content"
+const SmallBannerContainer = document.querySelectorAll(
+  ".small-banner .small-banner-container"
 );
-console.log(BigBannerText);
+const SmallBannerItem = document.querySelectorAll(
+  ".small-banner .small-banner-container .small-banner-item"
+);
+const SmallBannerItemImg = document.querySelectorAll(
+  ".small-banner .small-banner-container .small-banner-item img"
+);
 let currentIndex = 0;
 // Hide all banners first
-BigBannerSlider.forEach((item) => {
+BigBannerSlider.forEach((item, index) => {
   item.style.cssText = `display: none;`;
+  SmallBannerItemImg[index].style.cssText = `opacity: 0.8;`;
 });
 // Show the first banner
 BigBannerSlider[currentIndex].style.cssText = `display: block;`;
-setInterval(() => {
-  BigBannerSlider.forEach((item) => {
+SmallBannerItemImg[currentIndex].style.cssText = `opacity: 1;`;
+const playInterval = setInterval(() => {
+  BigBannerSlider.forEach((item, index) => {
     item.style.cssText = `display: none;`;
+    SmallBannerItemImg[index].style.cssText = `opacity: 0.8;`;
   });
   BigBannerSlider[currentIndex].style.cssText = `display: block;`;
+  SmallBannerItemImg[currentIndex].style.cssText = `opacity: 1;`;
   currentIndex = (currentIndex + 1) % BigBannerSlider.length;
 }, 1000);
+
+// click on any small banner
+SmallBannerItem.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    BigBannerSlider[index].style.cssText = `display: block;`;
+    item.style.cssText = "opacity: 1;";
+    BigBannerSlider.forEach((hidebanner, hideindex) => {
+      if (index != hideindex) {
+        hidebanner.style.cssText = `display: none;`;
+      }
+    });
+    clearInterval(playInterval);
+    clearOpacity(SmallBannerItem);
+  });
+});
+
+const clearOpacity = (ItemToClear) => {
+  ItemToClear.forEach((item) => {
+    item.style.opacity = "0.9";
+  });
+};
