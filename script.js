@@ -85,53 +85,47 @@ navSideSubmenuCloseBtn.forEach((Btn, index) => {
   });
 });
 
-// Play the big and small banner animation
+// for slideshow banner and click small banner
 const BigBannerSlider = document.querySelectorAll(".big-banner");
-const SmallBannerContainer = document.querySelectorAll(
-  ".small-banner .small-banner-container"
-);
-const SmallBannerItem = document.querySelectorAll(
-  ".small-banner .small-banner-container .small-banner-item"
-);
-const SmallBannerItemImg = document.querySelectorAll(
-  ".small-banner .small-banner-container .small-banner-item img"
-);
-let currentIndex = 0;
-// Hide all banners first
-BigBannerSlider.forEach((item, index) => {
-  item.style.cssText = `display: none;`;
-  SmallBannerItemImg[index].style.cssText = `opacity: 0.8;`;
-});
-// Show the first banner
-BigBannerSlider[currentIndex].style.cssText = `display: block;`;
-SmallBannerItemImg[currentIndex].style.cssText = `opacity: 1;`;
-const playInterval = setInterval(() => {
-  BigBannerSlider.forEach((item, index) => {
-    item.style.cssText = `display: none;`;
-    SmallBannerItemImg[index].style.cssText = `opacity: 0.8;`;
-  });
-  BigBannerSlider[currentIndex].style.cssText = `display: block;`;
-  SmallBannerItemImg[currentIndex].style.cssText = `opacity: 1;`;
-  currentIndex = (currentIndex + 1) % BigBannerSlider.length;
-}, 1000);
+const SmallBannerItem = document.querySelectorAll(".small-banner-item");
+const SmallBannerItemImg = document.querySelectorAll(".small-banner-item img");
 
-// click on any small banner
+let currentIndex = 0;
+let playInterval;
+
+// update banner function
+const updateBanners = (index) => {
+  // hide all banners first
+  BigBannerSlider.forEach((banner, i) => {
+    banner.style.display = "none";
+    SmallBannerItemImg[i].style.opacity = "0.5";
+  });
+
+  // click to show this banner
+  BigBannerSlider[index].style.display = "block";
+  SmallBannerItemImg[index].style.opacity = "1";
+
+  // update currentIndex
+  currentIndex = index;
+};
+
+// auto-play function
+const startAutoPlay = () => {
+  playInterval = setInterval(() => {
+    let nextIndex = (currentIndex + 1) % BigBannerSlider.length;
+    updateBanners(nextIndex);
+  }, 3000);
+};
+
+// start banners and slideshow
+updateBanners(currentIndex);
+startAutoPlay();
+
+// click small banners
 SmallBannerItem.forEach((item, index) => {
   item.addEventListener("click", () => {
-    BigBannerSlider[index].style.cssText = `display: block;`;
-    item.style.cssText = "opacity: 1;";
-    BigBannerSlider.forEach((hidebanner, hideindex) => {
-      if (index != hideindex) {
-        hidebanner.style.cssText = `display: none;`;
-      }
-    });
-    clearInterval(playInterval);
-    clearOpacity(SmallBannerItem);
+    clearInterval(playInterval); // stop auto-play
+    updateBanners(index); // show clicked banner
+    startAutoPlay(); // auto-play from the clicked small banner
   });
 });
-
-const clearOpacity = (ItemToClear) => {
-  ItemToClear.forEach((item) => {
-    item.style.opacity = "0.9";
-  });
-};

@@ -198,7 +198,7 @@ nav .nav-btn i {
   position: absolute;
   top: 0;
   padding: 0 0 0 30px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .big-banner .big-banner-content .img,
 .big-banner .big-banner-content .img img {
@@ -280,7 +280,7 @@ button.btn-primary:hover::after {
 }
 .small-banner {
   width: 100%;
-  height: 100px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -313,7 +313,7 @@ button.btn-primary:hover::after {
   left: 50.3%;
   transform: translate(-50%, -50%);
 }
-.change-after::after{
+.change-after::after {
   border: 3px solid rgb(0, 102, 255);
 }
 .small-banner .small-banner-container .small-banner-item img {
@@ -321,7 +321,7 @@ button.btn-primary:hover::after {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  opacity: 0.8;
+  opacity: 0.5;
   transition: 0.2s linear;
 }
 .small-banner .small-banner-container .small-banner-item:hover {
