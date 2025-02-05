@@ -1,12 +1,20 @@
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
-  nav .nav-content .nav-list li {
-    padding-inline: 10px;
-    font-size: 17px;
-  }
-  nav .nav-btn button {
-    width: 100px;
-    font-size: 18px;
+  nav {
+    .nav-content {
+      .nav-list {
+        li {
+          padding-inline: 10px;
+          font-size: 17px;
+        }
+      }
+    }
+    .nav-btn {
+      button {
+        width: 100px;
+        font-size: 18px;
+      }
+    }
   }
 }
 /*Large devices (desktops, 992px and up)*/
@@ -15,12 +23,12 @@
     width: 990px;
     height: 80px;
     align-self: center;
-  }
-  .small-banner .small-banner-container {
-    width: 99%;
-  }
-  .small-banner .small-banner-container .small-banner-item:hover::after {
-    border: 3px solid rgb(0, 102, 255);
+    .small-banner-container {
+      width: 99%;
+    }
+    .small-banner-item:hover::after {
+      border: 3px solid rgb(0, 102, 255);
+    }
   }
 }
 /*Medium devices (tablets, 768px and up)*/
@@ -29,49 +37,31 @@
     width: 750px;
     height: 60px;
     align-self: center;
-  }
-  .small-banner .small-banner-container .small-banner-item {
-    border-radius: 15px;
-    padding: 2.5px;
-    padding-inline: 2.8px;
-  }
-  .small-banner .small-banner-container .small-banner-item img {
-    border-radius: 10px;
-  }
-  .small-banner .small-banner-container .small-banner-item:hover {
-    transform: translateY(-10px);
-  }
-  .small-banner .small-banner-container .small-banner-item:hover::after {
-    border: 3px solid rgb(0, 102, 255);
+    .small-banner-container {
+      .small-banner-item {
+        border-radius: 15px;
+        padding: 2.5px;
+        padding-inline: 2.8px;
+        img {
+          border-radius: 10px;
+        }
+      }
+    }
+    .small-banner-item:hover {
+      transform: translateY(-10px);
+    }
+    .small-banner-item:hover::after {
+      border: 3px solid rgb(0, 102, 255);
+    }
   }
 }
 
 /*Small devices (landscape phones, 576px and up)*/
 @media (max-width: 767.98px) {
-  body{
+  body {
     align-items: normal;
   }
   header {
-    display: none;
-  }
-  nav {
-    width: 100%;
-  }
-  nav .nav-icon {
-    width: 60px;
-    display: flex;
-    height: 100%;
-    align-items: center;
-    gap: 15px;
-  }
-  nav .nav-icon i {
-    cursor: pointer;
-    font-size: 26px;
-  }
-  nav .nav-icon .fa-x,
-  nav .nav-content .nav-list,
-  nav .nav-content .nav-list li .sub-nav,
-  nav .nav-btn i {
     display: none;
   }
   .nav-side {
@@ -84,41 +74,45 @@
     transition: linear 0.3s;
     display: block;
     z-index: 99;
-  }
-  .nav-side ul {
-    width: 100%;
-    height: 100%;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  .nav-side ul li {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    padding-inline: 10px;
-    align-items: center;
-    cursor: pointer;
-    justify-content: space-between;
-  }
-  .nav-side ul li span {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    font-size: 25px;
-    font-weight: 500;
-    font-family: "Poppins";
-  }
-  .nav-side ul li span i {
-    width: 30px;
-    font-size: 25px;
-    margin-right: 20px;
-    color: rgb(109, 109, 109);
-  }
-  .nav-side ul li:hover span,
-  .nav-side ul li:hover span i {
-    color: rgb(28, 118, 253);
+    ul {
+      width: 100%;
+      height: 100%;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      li {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        padding-inline: 10px;
+        align-items: center;
+        cursor: pointer;
+        justify-content: space-between;
+        span {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          font-size: 25px;
+          font-weight: 500;
+          font-family: "Poppins";
+          i {
+            width: 30px;
+            font-size: 25px;
+            margin-right: 20px;
+            color: rgb(109, 109, 109);
+          }
+        }
+      }
+      li:hover {
+        span {
+          color: rgb(28, 118, 253);
+          i {
+            color: rgb(28, 118, 253);
+          }
+        }
+      }
+    }
   }
   .nav-side-submenu {
     z-index: 101;
@@ -131,115 +125,172 @@
     padding: 0 0 0 10px;
     transform: translateX(-100%);
     transition: ease-in 0.3s;
+    .submenu {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform: translateX(-100%);
+      transition: ease-in 0.4s;
+      i {
+        margin-top: 10px;
+        font-size: 25px;
+        cursor: pointer;
+        width: 50px;
+      }
+      h1 {
+        height: 50px;
+        margin-block: 10px;
+        font-size: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-family: "Poppins";
+      }
+      ul {
+        height: fit-content;
+        width: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        li {
+          width: 100%;
+          height: 60px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          font-size: 25px;
+          gap: 10px;
+          cursor: pointer;
+          font-weight: 500;
+          font-family: "Poppins";
+          i {
+            font-size: 30px;
+            margin-top: -1px;
+          }
+        }
+        li:hover {
+          color: rgb(28, 118, 253);
+        }
+      }
+    }
   }
-  .nav-side-submenu .submenu {
+  nav {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    transform: translateX(-100%);
-    transition: ease-in 0.4s;
-  }
-  .nav-side-submenu .submenu i {
-    margin-top: 10px;
-    font-size: 25px;
-    cursor: pointer;
-    width: 50px;
-  }
-  .nav-side-submenu .submenu h1 {
-    height: 50px;
-    margin-block: 10px;
-    font-size: 40px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-family: "Poppins";
-  }
-  .nav-side-submenu .submenu ul {
-    height: fit-content;
-    width: 100%;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .nav-side-submenu .submenu ul li {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 25px;
-    gap: 10px;
-    cursor: pointer;
-    font-weight: 500;
-    font-family: "Poppins";
-  }
-  .nav-side-submenu .submenu ul li:hover {
-    color: rgb(28, 118, 253);
-  }
-  .nav-side-submenu .submenu ul li i {
-    font-size: 30px;
-    margin-top: -1px;
+    .nav-icon {
+      width: 60px;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      gap: 15px;
+      i {
+        cursor: pointer;
+        font-size: 26px;
+      }
+      .fa-x {
+        display: none;
+      }
+    }
+    .nav-content {
+      .nav-list {
+        display: none;
+        li .sub-nav {
+          display: none;
+        }
+      }
+    }
+    .nav-btn {
+      i {
+        display: none;
+      }
+    }
   }
   .big-banner {
     width: 100%;
     height: fit-content;
     margin-bottom: 210px;
+    .big-banner-img {
+      width: 100%;
+      height: 400px;
+      .img-md {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+      .img-lg {
+        display: none;
+      }
+    }
+    .big-banner-content {
+      height: 350px;
+      top: 340px;
+      padding: 0 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .img {
+        width: 140px;
+        img {
+          width: 140px;
+        }
+      }
+      .des {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-inline: 20px;
+        h1 {
+          font-size: 20px;
+          margin-bottom: 10px;
+          text-align: center;
+        }
+        p {
+          text-align: center;
+          font-size: 14px;
+        }
+        button {
+          width: 145px;
+          height: 35px;
+          font-size: 13px;
+        }
+        button:hover::after {
+          width: 145px;
+          height: 35px;
+        }
+      }
+    }
   }
-  .big-banner .big-banner-img {
+  .small-banner {
     width: 100%;
-    height: 400px;
+    height: 200px;
+    overflow: hidden;
+    margin-top: 90px;
+    z-index: 9;
+    .small-banner-container {
+      width: fit-content;
+      height: 100%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      display: block;
+      white-space: nowrap;
+      padding: 20px;
+      z-index: 10;
+      .small-banner-item {
+        width: 300px;
+        height: 100%;
+        display: inline-block;
+        margin-inline: 10px;
+        padding-left: 4px;
+      }
+      .small-banner-item:hover {
+        transform: translateY(0);
+      }
+    }
   }
-  .big-banner .big-banner-img .img-md {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-  }
-  .big-banner .big-banner-img .img-lg {
-    display: none;
-  }
-  .big-banner .big-banner-content {
-    height: 350px;
-    top: 290px;
-    padding: 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .big-banner .big-banner-content .img,
-  .big-banner .big-banner-content .img img {
-    height: 140px;
-  }
-  .big-banner .big-banner-content .des {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-inline: 20px;
-  }
-  .big-banner .big-banner-content .des h1 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  .big-banner .big-banner-content .des p {
-    text-align: center;
-    font-size: 14px;
-  }
-  .big-banner .big-banner-content .des button {
-    width: 145px;
-    height: 35px;
-    font-size: 13px;
-  }
-  .big-banner .big-banner-content .des button:hover::after {
-    width: 145px;
-    height: 35px;
-  }
+
   /* Reuse Md Class*/
-  .bg-md-purple {
-    background-color: rgb(10, 8, 47) !important;
-  }
   .bg-md-light {
     background-color: rgb(234, 239, 249) !important;
   }
@@ -249,6 +300,9 @@
   .bg-md-blue-slate {
     background-color: rgb(2, 8, 26) !important;
   }
+  .bg-md-gray {
+    background-color: rgba(24, 30, 35, 255) !important;
+  }
   .bg-md-pink {
     background-color: rgb(160, 64, 121) !important;
   }
@@ -256,33 +310,7 @@
   .bg-md-light .des p {
     color: black !important;
   }
-  .small-banner {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    margin-top: 50px;
-    z-index: 9;
-  }
-  .small-banner .small-banner-container {
-    width: fit-content;
-    height: 100%;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    display: block;
-    white-space: nowrap;
-    padding: 20px;
-    z-index: 10;
-  }
-  .small-banner .small-banner-container .small-banner-item {
-    width: 300px;
-    height: 100%;
-    display: inline-block;
-    margin-inline: 10px;
-    padding-left: 4px;
-  }
-  .small-banner .small-banner-container .small-banner-item:hover {
-    transform: translateY(0);
-  }
+  
 }
 
 /*Extra small devices (portrait phones, less than 576px)*/

@@ -87,8 +87,14 @@ navSideSubmenuCloseBtn.forEach((Btn, index) => {
 
 // for slideshow banner and click small banner
 const BigBannerSlider = document.querySelectorAll(".big-banner");
-const SmallBannerItem = document.querySelectorAll(".small-banner-item");
-const SmallBannerItemImg = document.querySelectorAll(".small-banner-item img");
+const SmallBanner = document.querySelector(".small-banner");
+const SmallBannerContainer = SmallBanner.querySelector(
+  ".small-banner-container"
+);
+const SmallBannerItem = SmallBanner.querySelectorAll(".small-banner-item");
+const SmallBannerItemImg = SmallBanner.querySelectorAll(
+  ".small-banner-item img"
+);
 
 let currentIndex = 0;
 let playInterval;
@@ -113,8 +119,21 @@ const updateBanners = (index) => {
 const startAutoPlay = () => {
   playInterval = setInterval(() => {
     let nextIndex = (currentIndex + 1) % BigBannerSlider.length;
+    if (nextIndex === 0) {
+      // Reset scroll position to the beginning
+      SmallBannerContainer.scrollTo({
+        left: 0,
+        behavior: "smooth",
+      });
+    } else {
+      // Move to the next slide
+      SmallBannerContainer.scrollBy({
+        left: 280,
+        behavior: "smooth",
+      });
+    }
     updateBanners(nextIndex);
-  }, 3000);
+  }, 2500);
 };
 
 // start banners and slideshow
