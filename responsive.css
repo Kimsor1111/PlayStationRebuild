@@ -302,8 +302,7 @@
           font-size: 13px;
         }
         button:hover::after {
-          width: 145px;
-          height: 35px;
+          display: none;
         }
       }
     }
@@ -371,6 +370,9 @@
         justify-content: center;
         button {
           margin: 0;
+          width: 145px;
+          height: 35px;
+          font-size: 13px;
         }
         button:hover::after {
           display: none;

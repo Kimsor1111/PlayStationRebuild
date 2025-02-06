@@ -153,4 +153,4 @@ const BannerProduct = document.querySelectorAll(".banner-product");
 BannerProduct.forEach((item, index) => {
   item.style.cssText = "display: none";
 });
-BannerProduct[0].style.cssText = "display: flex";
+BannerProduct[3].style.cssText = "display: flex";
