@@ -107,7 +107,7 @@ const updateBanners = (index) => {
     SmallBannerItemImg[i].style.opacity = "0.5";
   });
 
-  // click to show this banner
+  // show banner
   BigBannerSlider[index].style.display = "block";
   SmallBannerItemImg[index].style.opacity = "1";
 
@@ -128,7 +128,7 @@ const startAutoPlay = () => {
     } else {
       // Move to the next slide
       SmallBannerContainer.scrollBy({
-        left: 280,
+        left: 310,
         behavior: "smooth",
       });
     }
@@ -145,6 +145,12 @@ SmallBannerItem.forEach((item, index) => {
   item.addEventListener("click", () => {
     clearInterval(playInterval); // stop auto-play
     updateBanners(index); // show clicked banner
-    startAutoPlay(); // auto-play from the clicked small banner
   });
 });
+
+// Product banner
+const BannerProduct = document.querySelectorAll(".banner-product");
+BannerProduct.forEach((item, index) => {
+  item.style.cssText = "display: none";
+});
+BannerProduct[0].style.cssText = "display: flex";
