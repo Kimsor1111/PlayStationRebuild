@@ -282,6 +282,7 @@
       align-items: center;
       .img {
         width: 180px;
+        background-color: red;
         img {
           width: 100%;
         }
