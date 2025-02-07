@@ -150,7 +150,8 @@ SmallBannerItem.forEach((item, index) => {
 
 // Product banner
 const BannerProduct = document.querySelectorAll(".banner-product");
+let start = 0;
 BannerProduct.forEach((item, index) => {
   item.style.cssText = "display: none";
 });
-BannerProduct[3].style.cssText = "display: flex";
+BannerProduct[start].style.cssText = "display: flex";

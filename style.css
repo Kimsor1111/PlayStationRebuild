@@ -247,7 +247,7 @@ nav {
     }
   }
 }
-.header-banner{
+.header-banner {
   display: none;
 }
 .small-banner {
@@ -299,72 +299,136 @@ nav {
     }
   }
 }
-
-.banner-product {
+.banner-product-container {
   width: 100%;
-  height: 530px;
-  background-color: white;
+  height: fit-content;
+  background-color: green;
   margin-top: 100px;
   display: flex;
-  justify-content: center;
-  .banner-product-des {
-    width: 35%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    h1 {
-      font-weight: 300;
-      font-size: 50px;
-      margin-bottom: 20px;
-    }
-    p {
-      font-weight: 300;
-      font-size: 23px;
-      color: rgb(0, 102, 255);
-      margin-bottom: 5px;
-    }
-    p.des {
-      font-size: 14.5px;
-      color: gray;
-    }
-    .btn {
+  flex-direction: column;
+  align-items: center;
+  div {
+    .banner-product {
       width: 100%;
-      height: 40px;
-      margin-top: 5px;
-      button {
-        width: 165px;
-        height: 40px;
-        margin: 20px 5px 0 0;
-        border: none;
-        border-radius: 30px;
-        font-weight: 550;
-        font-family: "Poppins";
-        font-size: 16px;
-        cursor: pointer;
-        color: black;
-        position: relative;
-        text-transform: capitalize;
+      height: 530px;
+      /* background-color: ; */
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      .banner-product-des {
+        width: 35%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+          font-weight: 300;
+          font-size: 50px;
+          margin-bottom: 20px;
+        }
+        p {
+          font-weight: 300;
+          font-size: 23px;
+          color: rgb(0, 102, 255);
+          margin-bottom: 5px;
+        }
+        p.des {
+          font-size: 14.5px;
+          color: gray;
+        }
+        .btn {
+          width: 100%;
+          height: 40px;
+          margin-top: 5px;
+          button {
+            width: 165px;
+            height: 40px;
+            margin: 20px 5px 0 0;
+            border: none;
+            border-radius: 30px;
+            font-weight: 550;
+            font-family: "Poppins";
+            font-size: 16px;
+            cursor: pointer;
+            color: black;
+            position: relative;
+            text-transform: capitalize;
+          }
+          button:hover::after {
+            content: "";
+            width: 165px;
+            height: 40px;
+            padding: 2.2px;
+            border-radius: 35px;
+            top: -4px;
+            left: -3.6px;
+            position: absolute;
+          }
+        }
       }
-      button:hover::after {
-        content: "";
-        width: 165px;
-        height: 40px;
-        padding: 2.2px;
-        border-radius: 35px;
-        top: -4px;
-        left: -3.6px;
-        position: absolute;
+      .banner-product-img {
+        width: 55%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
       }
     }
   }
-  .banner-product-img {
-    width: 60%;
-    height: 100%;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+  .banner-product-slider-container {
+    width: 100%;
+    height: fit-content;
+    background-color: pink;
+    padding-inline: 60px;
+    overflow: scroll;
+    .banner-product-slider {
+      width: 2400px;
+      height: 170px;
+      background-color: red;
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5%;
+      .item {
+        width: 9.5%;
+        height: 100%;
+        background-color: gold;
+        padding: 10px;
+        .img {
+          width: 100%;
+          height: 80%;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+          }
+        }
+        .title {
+          width: 100%;
+          height: 20%;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .banner-product-pagination {
+    width: fit-content;
+    height: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+    .dot {
+      width: 15px;
+      height: 2.5px;
+      background-color: rgba(76, 76, 76, 0.791);
+      border-radius: 1px;
+      cursor: pointer;
+    }
+    .dot.active {
+      background-color: rgba(0, 112, 204);
     }
   }
 }
