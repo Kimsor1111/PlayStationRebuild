@@ -385,7 +385,7 @@ nav {
     .banner-product-slider-container {
       width: 100%;
       height: fit-content;
-      overflow: scroll;
+      overflow: hidden;
       .banner-product-slider {
         width: 2300px;
         height: 150px;
@@ -402,13 +402,14 @@ nav {
             width: 100%;
             height: 80%;
             padding: 1px;
-            transition: .1s ease-in-out;
+            transition: 0.1s ease-in-out;
             img {
               width: 100%;
               height: 100%;
               object-fit: fill;
               opacity: 0.7;
               border-radius: 15px;
+              transition: 0.5s;
             }
           }
           .title {
@@ -432,8 +433,8 @@ nav {
           }
         }
         .btn {
-          width: 45px;
-          height: 45px;
+          width: 40px;
+          height: 40px;
           border-radius: 50%;
           display: flex;
           justify-content: center;
@@ -447,14 +448,15 @@ nav {
           cursor: pointer;
           font-family: "Poppins";
           background-color: rgba(0, 102, 255, 0.8);
+          z-index: 10;
         }
         .btn:hover {
           background-color: rgb(0, 102, 255);
         }
         .btn:hover::after {
           content: "";
-          width: 45px;
-          height: 45px;
+          width: 40px;
+          height: 40px;
           position: absolute;
           padding: 2px;
           top: -3.5px;
@@ -464,7 +466,6 @@ nav {
 
         .prev-btn {
           left: 10px;
-          background-color: rgba(0, 102, 255, 0.6);
         }
 
         .next-btn {
@@ -482,9 +483,9 @@ nav {
       margin-top: 10px;
       .dot {
         width: 15px;
-        height: 2.5px;
+        height: 2px;
         background-color: rgba(76, 76, 76, 0.791);
-        border-radius: 1px;
+        border-radius: 2px;
         cursor: pointer;
       }
       .dot.active {

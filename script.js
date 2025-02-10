@@ -150,8 +150,88 @@ SmallBannerItem.forEach((item, index) => {
 
 // Product banner
 const BannerProduct = document.querySelectorAll(".banner-product");
-let start = 0;
-BannerProduct.forEach((item, index) => {
-  item.style.cssText = "display: none";
+const BannerProductSliderContainer = document.querySelector(
+  ".banner-product-container .container-slider-product .banner-product-slider-container"
+);
+const prevBtnSlider = BannerProductSliderContainer.querySelector(".prev-btn");
+const nextBtnSlider = BannerProductSliderContainer.querySelector(".next-btn");
+const BannerProductItem =
+  BannerProductSliderContainer.querySelectorAll(".item");
+const dots = document.querySelectorAll(
+  ".banner-product-container .container-slider-product .banner-product-pagination .dot"
+);
+let showPrd = 0;
+const HideBanner = () => {
+  BannerProduct.forEach((item, index) => {
+    item.style.cssText = "display: none";
+    BannerProductItem[index].classList.remove("active");
+  });
+};
+const ShowBanner = (index) => {
+  BannerProduct[index].style.cssText = "display: flex";
+  BannerProductItem[index].classList.add("active");
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", index === i);
+  });
+};
+const SlideBanner = (slide, condition) => {
+  if (condition) {
+    BannerProductSliderContainer.scrollBy({ left: slide, behavior: "smooth" });
+  } else {
+    BannerProductSliderContainer.scrollTo({ left: slide, behavior: "smooth" });
+  }
+};
+HideBanner();
+ShowBanner(showPrd);
+prevBtnSlider.addEventListener("click", () => {
+  showPrd--;
+  if (showPrd < 0) {
+    showPrd = 0;
+    return;
+  } else {
+    HideBanner();
+    ShowBanner(showPrd);
+    SlideBanner(-220, true);
+  }
 });
-BannerProduct[start].style.cssText = "display: flex";
+nextBtnSlider.addEventListener("click", () => {
+  showPrd++;
+  if (showPrd >= BannerProduct.length) {
+    showPrd = BannerProduct.length - 1;
+    return;
+  } else {
+    HideBanner();
+    ShowBanner(showPrd);
+    SlideBanner(220, true);
+  }
+});
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    dot.classList.add("active");
+    SlideBanner(220 * index, false);
+    BannerProduct[index].style.cssText = "display: flex";
+    BannerProductItem[index].classList.add("active");
+    dots.forEach((remove, removeIndex) => {
+      if (removeIndex != index) {
+        remove.classList.remove("active");
+        BannerProduct[removeIndex].style.cssText = "display: none";
+        BannerProductItem[removeIndex].classList.remove("active");
+      }
+    });
+  });
+});
+
+BannerProductItem.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    item.classList.add("active");
+    BannerProduct[index].style.cssText = "display: flex";
+    dots[index].classList.add("active");
+    BannerProductItem.forEach((remove, removeIndex) => {
+      if (index != removeIndex) {
+        remove.classList.remove("active");
+        BannerProduct[removeIndex].style.cssText = "display: none";
+        dots[removeIndex].classList.remove("active");
+      }
+    });
+  });
+});

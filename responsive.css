@@ -398,6 +398,7 @@
     }
     div.container-slider-product {
       .banner-product-slider-container {
+        overflow: scroll;
         .banner-product-slider {
           .btn {
             display: none;
@@ -405,23 +406,7 @@
         }
       }
       .banner-product-pagination {
-        width: fit-content;
-        height: 10px;
-        background-color: white;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        margin-top: 10px;
-        .dot {
-          width: 15px;
-          height: 2.5px;
-          background-color: rgba(76, 76, 76, 0.791);
-          border-radius: 1px;
-          cursor: pointer;
-        }
-        .dot.active {
-          background-color: rgba(0, 112, 204);
-        }
+        display: none;
       }
     }
   }
