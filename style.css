@@ -494,8 +494,287 @@ nav {
     }
   }
 }
-/* Reuse Class */
+/* Game Feature */
+.game-container {
+  width: 100%;
+  height: fit-content;
+  background-color: rgb(24, 24, 24);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-block: 50px;
+  margin-top: 50px;
+  .game-header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-weight: 300;
+      color: white;
+      font-size: 38px;
+      text-align: center;
+    }
+  }
+  .game-btn {
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    background-color: rgb(15, 15, 15);
+    margin-block: 10px;
+    border-radius: 25px;
+    .button {
+      width: 48%;
+      height: 100%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 520;
+      font-family: "Poppins";
+      color: white;
+    }
+    .button.active {
+      background-color: white;
+      color: black;
+    }
+  }
+  .game-row-container.active {
+    display: flex;
+  }
+  .game-row-container {
+    width: 92%;
+    height: fit-content;
+    display: none;
+    justify-content: space-between;
+    /* background-color: yellow; */
+    row-gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
 
+    .game {
+      width: 18%;
+      height: fit-content;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+      /* background-color: green; */
+      .img {
+        width: 200px;
+        height: 190px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 20px;
+        }
+      }
+      .title {
+        color: white;
+        padding: 5px;
+      }
+    }
+    .game:hover {
+      opacity: 1;
+      transform: scale(1.03);
+    }
+    .game:not(:hover) {
+      opacity: 0.7;
+    }
+  }
+}
+
+/* Plus Feature */
+.plus-feature {
+  width: 100%;
+  height: 780px;
+  background-image: url("img/plusback.webp");
+  background-repeat: no-repeat;
+  padding-block: 70px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  .plus-logo {
+    width: 500px;
+    height: 70px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .plus-title {
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      font-weight: 300;
+      font-size: 40px;
+      padding-top: 10px;
+    }
+    p {
+      text-align: center;
+      padding-block: 20px;
+      color: rgb(90, 90, 90);
+    }
+  }
+  .btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 300;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-family: "Poppins";
+    background-color: rgba(0, 102, 255, 0.8);
+    z-index: 10;
+  }
+  .btn:hover {
+    background-color: rgb(0, 102, 255);
+  }
+  .btn:hover::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    padding: 2px;
+    top: -3.5px;
+    border-radius: 50%;
+    border: 2px solid rgb(0, 102, 255);
+  }
+
+  .btn-prev {
+    left: 10px;
+  }
+
+  .btn-next {
+    right: 10px;
+  }
+  button {
+    width: 165px;
+    height: 42px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 550;
+    font-family: "Poppins";
+    font-size: 16px;
+    cursor: pointer;
+    color: black;
+    position: relative;
+    text-transform: capitalize;
+  }
+  button:hover::after {
+    content: "";
+    width: 165.2px;
+    height: 35px;
+    padding: 2.2px;
+    border-radius: 35px;
+    top: -4px;
+    left: -3.5px;
+    position: absolute;
+  }
+  .plus-slider {
+    width: 100%;
+    height: 400px;
+    margin-top: 40px;
+    overflow: hidden;
+    .slider-container {
+      width: 2900px;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding-inline: 70px;
+      .slider {
+        width: 33%;
+        height: 100%;
+        position: relative;
+        .img {
+          width: 100%;
+          height: 100%;
+          img.img-lg {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+          }
+          img.img-md {
+            display: none;
+          }
+        }
+        .des {
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.3);
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 15px;
+          display: flex;
+          align-items: end;
+          padding: 0 0 50px 30px;
+          div {
+            width: 45%;
+            /* background-color: purple; */
+            .logo {
+              width: 60%;
+              height: 40px;
+              /* background-color: tan; */
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            h1 {
+              color: white;
+              font-weight: 300;
+              font-size: 25px;
+              padding-block: 10px;
+            }
+            p {
+              color: white;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .plus-pagination {
+    width: fit-content;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+    .dot {
+      width: 15px;
+      height: 2.5px;
+      background-color: rgba(76, 76, 76, 0.791);
+      border-radius: 2px;
+      cursor: pointer;
+    }
+    .dot.active {
+      background-color: rgba(0, 112, 204);
+    }
+  }
+}
+
+/* Reuse Class */
 button.btn-light {
   background-color: white;
   color: black;

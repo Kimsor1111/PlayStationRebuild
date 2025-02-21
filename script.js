@@ -161,6 +161,7 @@ const dots = document.querySelectorAll(
   ".banner-product-container .container-slider-product .banner-product-pagination .dot"
 );
 let showPrd = 0;
+let isDown = false;
 const HideBanner = () => {
   BannerProduct.forEach((item, index) => {
     item.style.cssText = "display: none";
@@ -235,3 +236,56 @@ BannerProductItem.forEach((item, index) => {
     });
   });
 });
+
+const GameBtn = document.querySelectorAll(".game-container .game-btn .button");
+const GameContainer = document.querySelectorAll(
+  ".game-container .game-row-container"
+);
+GameBtn.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    btn.classList.add("active");
+    GameContainer[index].classList.add("active");
+    GameBtn.forEach((removeBtn, removeIndex) => {
+      if (index != removeIndex) {
+        removeBtn.classList.remove("active");
+        GameContainer[removeIndex].classList.remove("active");
+      }
+    });
+  });
+});
+
+const plusBtnNext = document.querySelector(".plus-feature .btn-next");
+const plusBtnPrev = document.querySelector(".plus-feature .btn-prev");
+const plusSlider = document.querySelector(".plus-feature .plus-slider");
+const plusDots = document.querySelectorAll(
+  ".plus-feature .plus-pagination .dot"
+);
+let index = 0;
+const removeDots = () => {
+  plusDots.forEach((dot) => {
+    dot.classList.remove("active");
+  });
+};
+plusBtnPrev.addEventListener("click", () => {
+  plusSlider.scrollBy({ left: -600, behavior: "smooth" });
+  removeDots();
+  if(index > 0) index--;
+  plusDots[index].classList.add("active");
+});
+plusBtnNext.addEventListener("click", () => {
+  plusSlider.scrollBy({ left: 600, behavior: "smooth" });
+  removeDots();
+  if(index < 2) index++;
+  plusDots[index].classList.add("active");
+});
+plusDots.forEach((dot, index) =>{
+  dot.addEventListener("click" , ()=>{
+    dot.classList.add("active")
+    plusSlider.scrollTo({ left: 600 * index, behavior: "smooth" });
+    plusDots.forEach((remove, i) =>{
+      if(index != i){
+        remove.classList.remove("active")
+      }
+    })
+  })
+})

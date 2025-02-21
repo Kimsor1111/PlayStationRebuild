@@ -30,6 +30,18 @@
       border: 3px solid rgb(0, 102, 255);
     }
   }
+  .game-container {
+    .game-row-container {
+      width: 100%;
+      .game {
+        width: 18%;
+        .img {
+          width: 180px;
+          height: 170px;
+        }
+      }
+    }
+  }
 }
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -104,10 +116,144 @@
       }
     }
   }
+  .game-container {
+    .game-row-container {
+      width: 90%;
+      .game {
+        width: 30%;
+        .img {
+          width: 200px;
+          height: 180px;
+        }
+      }
+      .game.game-md {
+        display: none;
+      }
+    }
+  }
+  .plus-feature {
+    button {
+      height: 42px;
+    }
+    button:hover::after {
+      height: 42px;
+      top: -3.8px;
+    }
+    .plus-slider {
+      height: 260px;
+      overflow: hidden;
+      .slider-container {
+        width: 2200px;
+      }
+    }
+  }
 }
 
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .game-container {
+    .game-header {
+      width: 90%;
+      h1 {
+        font-size: 23px;
+      }
+    }
+    .game-btn {
+      width: 230px;
+      height: 40px;
+      .button {
+        font-size: 12px;
+      }
+    }
+    .game-row-container {
+      width: 100%;
+      .game {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        .img {
+          width: 160px;
+          height: 160px;
+          img {
+            border-radius: 10px;
+          }
+        }
+      }
+      .game.game-md {
+        display: none;
+      }
+    }
+  }
+  .plus-feature {
+    button {
+      width: 155px;
+      height: 32px;
+    }
+    button:hover::after {
+      display: none;
+    }
+    .plus-slider {
+      height: 260px;
+      overflow: hidden; .slider-container {
+        width: 1600px;
+        height: 100%;
+        .slider {
+          .img {
+            width: 100%;
+            height: 100%;
+            img.img-md {
+              width: 100%;
+              height: 100%;
+              border-radius: 15px;
+              display: block;
+              object-fit: cover;
+            }
+            img.img-lg {
+              display: none;
+            }
+          }
+          .des {
+            padding: 0 0 20px 20px;
+            div {
+              width: 90%;
+              h1 {
+                color: white;
+                font-weight: 300;
+                font-size: 22px;
+                padding-block: 10px;
+              }
+              p {
+                color: white;
+                font-size: 11px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .plus-pagination {
+      width: fit-content;
+      height: 10px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 10px;
+      .dot {
+        width: 15px;
+        height: 2px;
+        background-color: rgba(76, 76, 76, 0.791);
+        border-radius: 2px;
+        cursor: pointer;
+      }
+      .dot.active {
+        background-color: rgba(0, 112, 204);
+      }
+    }
+  }
+}
 /*Small devices (landscape phones, 576px and up)*/
-@media (max-width: 767.98px) {
+@media (max-width: 576px) {
   body {
     align-items: normal;
   }
@@ -408,6 +554,106 @@
       .banner-product-pagination {
         display: none;
       }
+    }
+  }
+
+  .game-container {
+    .game-header {
+      width: 90%;
+      h1 {
+        font-size: 23px;
+      }
+    }
+    .game-btn {
+      width: 230px;
+      height: 40px;
+      .button {
+        font-size: 12px;
+      }
+    }
+    .game-row-container {
+      width: 100%;
+      .game {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        .img {
+          width: 115px;
+          height: 115px;
+          img {
+            border-radius: 10px;
+          }
+        }
+      }
+      .game.game-md {
+        display: none;
+      }
+    }
+  }
+
+  .plus-feature {
+    .plus-title {
+      h1 {
+        text-align: center;
+      }
+    }
+    .btn {
+      display: none;
+    }
+    button {
+      width: 155px;
+      height: 32px;
+    }
+    button:hover::after {
+      display: none;
+    }
+    .plus-slider {
+      height: 210px;
+      overflow-y: hidden;
+      overflow-x: scroll;
+      .slider-container {
+        padding-inline: 20px;
+        width: 1250px;
+        height: 100%;
+        .slider {
+          .img {
+            width: 100%;
+            height: 100%;
+            img.img-md {
+              width: 100%;
+              height: 100%;
+              border-radius: 15px;
+              display: block;
+              object-fit: cover;
+            }
+            img.img-lg {
+              display: none;
+            }
+          }
+          .des {
+            padding: 0 0 20px 20px;
+            background-color: rgba(0,0,0,0.5);
+            div {
+              width: 90%;
+              h1 {
+                color: white;
+                font-weight: 300;
+                font-size: 22px;
+                padding-block: 10px;
+              }
+              p {
+                color: white;
+                font-size: 11px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .plus-pagination {
+      display: none;
     }
   }
   /* Reuse Md Class*/
