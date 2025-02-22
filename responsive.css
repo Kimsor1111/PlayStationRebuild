@@ -251,6 +251,31 @@
       }
     }
   }
+  .feature-30th {
+    .feature-30th-des {
+      height: fit-content;
+      div {
+        height: fit-content;
+        flex-direction: column;
+        gap: 1px;
+        button {
+          margin-top: 5px;
+        }
+        button:hover::after {
+          display: none;
+        }
+      }
+    }
+    .feature-30th-logo{
+      width: 35%;
+      height: 40%;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
 }
 /*Small devices (landscape phones, 576px and up)*/
 @media (max-width: 576px) {
@@ -656,6 +681,47 @@
       display: none;
     }
   }
+
+  .feature-30th {
+    height: 700px;
+    flex-direction: column-reverse;
+    justify-content: center;
+    .feature-30th-des {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-inline: 20px;
+      h1{
+        text-align: center;
+      }
+      p {
+        text-align: center;
+        padding-block: 20px;
+        color: rgb(90, 90, 90);
+      }
+      div {
+        gap: 5px;
+        button {
+          width: 185px;
+          height: 35px;
+        }
+        button:hover::after {
+          display: none;
+        }
+      }
+    }
+    .feature-30th-logo{
+      width: 70%;
+      height: 40%;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
   /* Reuse Md Class*/
   .bg-md-light {
     background-color: rgb(234, 239, 249) !important;

@@ -774,6 +774,72 @@ nav {
   }
 }
 
+/* 30th */
+.feature-30th {
+  width: 100%;
+  height: 550px;
+  background-image: url(img/30thback.webp);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  .feature-30th-des {
+    width: 50%;
+    height: fit-content;
+    padding-left: 30px;
+    box-sizing: border-box;
+    h1 {
+      font-weight: 300;
+      font-size: 40px;
+      padding-top: 10px;
+    }
+    p {
+      padding-block: 20px;
+      color: rgb(90, 90, 90);
+    }
+    div {
+      width: fit-content;
+      display: flex;
+      gap: 20px;
+      height: fit-content;
+      button {
+        width: 180px;
+        height: 40px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 30px;
+        font-weight: 550;
+        font-family: "Poppins";
+        font-size: 15px;
+        cursor: pointer;
+        color: black;
+        position: relative;
+        text-transform: capitalize;
+      }
+      button:hover::after {
+        content: "";
+        width: 180.2px;
+        height: 40px;
+        padding: 2.2px;
+        border-radius: 35px;
+        top: -4px;
+        left: -3.5px;
+        position: absolute;
+      }
+    }
+  }
+  .feature-30th-logo{
+    width: 35%;
+    height: 40%;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
 /* Reuse Class */
 button.btn-light {
   background-color: white;
