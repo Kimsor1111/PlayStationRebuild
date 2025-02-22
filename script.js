@@ -208,6 +208,7 @@ nextBtnSlider.addEventListener("click", () => {
 });
 dots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
+    showPrd = index;
     dot.classList.add("active");
     SlideBanner(220 * index, false);
     BannerProduct[index].style.cssText = "display: flex";
@@ -224,6 +225,7 @@ dots.forEach((dot, index) => {
 
 BannerProductItem.forEach((item, index) => {
   item.addEventListener("click", () => {
+    showPrd = index;
     item.classList.add("active");
     BannerProduct[index].style.cssText = "display: flex";
     dots[index].classList.add("active");

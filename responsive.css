@@ -683,9 +683,11 @@
   }
 
   .feature-30th {
-    height: 700px;
+    padding-block: 50px;
+    height: 500px;
     flex-direction: column-reverse;
     justify-content: center;
+    background-size: cover;
     .feature-30th-des {
       width: 100%;
       display: flex;
@@ -712,8 +714,8 @@
       }
     }
     .feature-30th-logo{
-      width: 70%;
-      height: 40%;
+      width: 60%;
+      height: 30%;
       img{
         width: 100%;
         height: 100%;
