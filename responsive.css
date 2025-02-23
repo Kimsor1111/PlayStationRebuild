@@ -147,6 +147,13 @@
       }
     }
   }
+  /* feature feb */
+  .feature-feb {
+    h1 {
+      width: 70%;
+      font-size: 45px;
+    }
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -195,7 +202,8 @@
     }
     .plus-slider {
       height: 260px;
-      overflow: hidden; .slider-container {
+      overflow: hidden;
+      .slider-container {
         width: 1600px;
         height: 100%;
         .slider {
@@ -266,14 +274,35 @@
         }
       }
     }
-    .feature-30th-logo{
+    .feature-30th-logo {
       width: 35%;
       height: 40%;
-      img{
+      img {
         width: 100%;
         height: 100%;
         object-fit: contain;
       }
+    }
+  }
+  /* feature feb */
+  .feature-feb {
+    justify-content: end;
+    padding-bottom: 100px;
+    h1 {
+      width: 60%;
+      font-size: 35px;
+    }
+    p {
+      width: 50%;
+      font-size: 14px;
+    }
+  }
+  .feature-feb-game {
+    height: fit-content;
+    padding-block: 30px;
+    padding-inline: 20px;
+    .item {
+      width: 90%;
     }
   }
 }
@@ -659,7 +688,7 @@
           }
           .des {
             padding: 0 0 20px 20px;
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgba(0, 0, 0, 0.5);
             div {
               width: 90%;
               h1 {
@@ -694,7 +723,7 @@
       flex-direction: column;
       align-items: center;
       padding-inline: 20px;
-      h1{
+      h1 {
         text-align: center;
       }
       p {
@@ -713,17 +742,36 @@
         }
       }
     }
-    .feature-30th-logo{
+    .feature-30th-logo {
       width: 60%;
       height: 30%;
-      img{
+      img {
         width: 100%;
         height: 100%;
         object-fit: contain;
       }
     }
   }
-
+  .feature-feb {
+    justify-content: end;
+    padding-bottom: 100px;
+    h1 {
+      width: 70%;
+      font-size: 35px;
+    }
+    p {
+      width: 70%;
+      font-size: 14px;
+    }
+  }
+  .feature-feb-game {
+    height: fit-content;
+    padding-block: 30px;
+    padding-inline: 20px;
+    .item {
+      width: 90%;
+    }
+  }
   /* Reuse Md Class*/
   .bg-md-light {
     background-color: rgb(234, 239, 249) !important;
