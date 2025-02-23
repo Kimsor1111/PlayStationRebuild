@@ -154,6 +154,17 @@
       font-size: 45px;
     }
   }
+  .ps-store {
+    height: 480px;
+    .des {
+      h1 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -303,6 +314,32 @@
     padding-inline: 20px;
     .item {
       width: 90%;
+    }
+  }
+  .ps-store {
+    height: fit-content;
+    flex-direction: column-reverse;
+    padding-block: 40px;
+    .des {
+      width: 80%;
+      margin-right: 0;
+      h1 {
+        font-size: 38px;
+        font-weight: 300;
+        margin-bottom: 10px;
+      }
+      button {
+        height: 35px;
+      }
+      button:hover::after {
+        display: none;
+      }
+    }
+    .img {
+      width: 90%;
+    }
+    .img:hover {
+      transform: scale(102%);
     }
   }
 }
@@ -772,6 +809,36 @@
       width: 90%;
     }
   }
+  .ps-store {
+    height: fit-content;
+    flex-direction: column-reverse;
+    padding-block: 40px;
+    .des {
+      width: 80%;
+      margin-right: 0;
+      h1 {
+        font-size: 30px;
+        font-weight: 300;
+        margin-bottom: 10px;
+      }
+      p{
+        font-size: 13px;
+      }
+      button {
+        height: 35px;
+      }
+      button:hover::after {
+        display: none;
+      }
+    }
+    .img {
+      width: 90%;
+    }
+    .img:hover {
+      transform: scale(102%);
+    }
+  }
+
   /* Reuse Md Class*/
   .bg-md-light {
     background-color: rgb(234, 239, 249) !important;
