@@ -42,6 +42,23 @@
       }
     }
   }
+  .social {
+    height: 350px;
+    h1 {
+      font-size: 32px;
+    }
+    .icon-container {
+      width: 38%;
+      .icon {
+        i {
+          font-size: 80px;
+        }
+      }
+    }
+  }
+  .marvel {
+    padding-left: 100px;
+  }
 }
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -164,6 +181,24 @@
         font-size: 15px;
       }
     }
+  }
+  .social {
+    margin-top: 70px;
+    height: 300px;
+    h1 {
+      font-size: 28px;
+    }
+    .icon-container {
+      width: 40%;
+      .icon {
+        i {
+          font-size: 75px;
+        }
+      }
+    }
+  }
+  .marvel {
+    padding-left: 80px;
   }
 }
 
@@ -341,6 +376,24 @@
     .img:hover {
       transform: scale(102%);
     }
+  }
+  .social {
+    height: 230px;
+    h1 {
+      font-size: 28px;
+    }
+    .icon-container {
+      width: 50%;
+      .icon {
+        i {
+          font-size: 50px;
+        }
+      }
+    }
+  }
+  .marvel {
+    padding-left: 80px;
+    margin-block: 2px;
   }
 }
 /*Small devices (landscape phones, 576px and up)*/
@@ -821,7 +874,7 @@
         font-weight: 300;
         margin-bottom: 10px;
       }
-      p{
+      p {
         font-size: 13px;
       }
       button {
@@ -837,6 +890,24 @@
     .img:hover {
       transform: scale(102%);
     }
+  }
+  .social {
+    height: 230px;
+    h1 {
+      font-size: 28px;
+    }
+    .icon-container {
+      width: 70%;
+      .icon {
+        i {
+          font-size: 50px;
+        }
+      }
+    }
+  } 
+  .marvel {
+    padding-left: 30px;
+    margin-block: 2px;
   }
 
   /* Reuse Md Class*/
