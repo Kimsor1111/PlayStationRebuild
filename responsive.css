@@ -203,6 +203,33 @@
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
+  .small-banner {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin-top: 0px;
+    z-index: 9;
+    .small-banner-container {
+      width: fit-content;
+      height: 100%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      display: block;
+      white-space: nowrap;
+      padding: 20px;
+      z-index: 10;
+      .small-banner-item {
+        width: 300px;
+        height: 100%;
+        display: inline-block;
+        margin-inline: 10px;
+        padding-left: 4px;
+      }
+      .small-banner-item:hover {
+        transform: translateY(0);
+      }
+    }
+  }
   .game-container {
     .game-header {
       width: 90%;
@@ -349,6 +376,74 @@
     padding-inline: 20px;
     .item {
       width: 90%;
+    }
+  }
+  .header-banner {
+    width: 100%;
+    display: block;
+    font-weight: 300;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 100px;
+    padding-inline: 10px;
+  }
+  .banner-product-container {
+    margin-top: 30px;
+    flex-direction: column-reverse;
+    gap: 20px;
+    div {
+      .banner-product {
+        height: fit-content;
+        flex-direction: column-reverse;
+        align-items: center;
+        .banner-product-des {
+          width: 80%;
+          height: fit-content;
+          h1 {
+            display: none;
+          }
+          p {
+            text-align: center;
+            font-size: 18px;
+          }
+          p.des {
+            font-size: 14px;
+          }
+          .btn {
+            width: 100%;
+            gap: 10px;
+            margin-block: 5px;
+            display: flex;
+            justify-content: center;
+            button {
+              margin: 0;
+              width: 145px;
+              height: 35px;
+              font-size: 13px;
+            }
+            button:hover::after {
+              display: none;
+            }
+          }
+        }
+        .banner-product-img {
+          width: 90%;
+          height: fit-content;
+        }
+      }
+    }
+    div.container-slider-product {
+      .banner-product-slider-container {
+        overflow: scroll;
+        .banner-product-slider {
+          .btn {
+            display: none;
+          }
+        }
+      }
+      .banner-product-pagination {
+        display: none;
+      }
     }
   }
   .ps-store {
@@ -904,7 +999,7 @@
         }
       }
     }
-  } 
+  }
   .marvel {
     padding-left: 30px;
     margin-block: 2px;
